@@ -24,6 +24,7 @@
         <article>
                 <h2>Article 2</h2>
                 <p>This is the second article.</p>
+                <p id="extra-text" style="display: none;">Dodatkowy tekst po kliknięciu!</p>
                 <button id="guzik">Read More</button>
         </article>
         </aside>
@@ -35,7 +36,8 @@
         let guzik = document.getElementById("guzik");
 
         guzik.addEventListener("click", function() {
-            alert("Kliknięto guzik!");
+            let extraText = document.getElementById("extra-text");
+            extraText.style.display = "block";
         });
     </script>
 </body>
